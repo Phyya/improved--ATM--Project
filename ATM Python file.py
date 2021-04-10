@@ -1,4 +1,6 @@
 import random
+import datetime
+now= datetime.datetime.now()
 database ={
     1234567890 : ["yeti", "baba", "your@gmail.com", "1111", 20000],
     5555555555 : ['girl', 'boy', "mine@gmail.com", "2222", 50000]
@@ -51,6 +53,8 @@ def login():
                     
 def bankOperations(user):
     print("Welcome %s %s." %(user[0], user[1]))
+    print("You logged in at : ")
+    print(now.strftime("%Y-%m-%d %H:%M:%S"))
     isSelectingOption = False
     while isSelectingOption == False:
         print("What would you like to do? \n" )
